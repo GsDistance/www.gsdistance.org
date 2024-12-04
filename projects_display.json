@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "name": "[tyuXX]",
+            "description": "tyuXX's project page",
+            "githubUrl": "https://github.com/tyuXX/tyuxx.gsdistance.org",
+            "liveUrl": "https://tyuxx.gsdistance.org/",
+            "date": "20/11/2024"
+        },
+        {
+            "name": "GsDistance Permanent File Storage",
+            "description": "Permanent file storage for GsDistance",
+            "githubUrl": "https://github.com/GsDistance/storage",
+            "liveUrl": "https://storage.gsdistance.org/",
+            "date": "27/11/2023"
+        }
+    ]
+}
