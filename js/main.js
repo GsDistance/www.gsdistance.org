@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         body.classList.toggle('light-theme', savedTheme === 'light');
         updateThemeIcon();
+        updateLogos(savedTheme);
     }
 
     themeToggle.addEventListener('click', () => {
@@ -21,8 +22,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = themeToggle.querySelector('i');
         if (body.classList.contains('light-theme')) {
             icon.className = 'fas fa-moon';
+            updateLogos('light');
         } else {
             icon.className = 'fas fa-sun';
+            updateLogos('dark');
+        }
+    }
+
+    function updateLogos(theme) {
+        const logos = document.querySelectorAll('.logo');
+        logos.forEach(logo => {
+            const logoImg = logo.querySelector('img');
+            if (theme === 'light') {
+                logoImg.src = logo.dataset.lightLogo;
+            } else {
+                logoImg.src = logo.dataset.darkLogo;
+            }
+        });
+
+        // Update favicon
+        const favicon = document.getElementById('favicon');
+        if (theme === 'light') {
+            favicon.href = favicon.dataset.lightHref;
+        } else {
+            favicon.href = favicon.dataset.darkHref;
         }
     }
 

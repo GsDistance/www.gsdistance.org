@@ -59,6 +59,16 @@ body.light-theme {
   color: var(--primary-color);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
